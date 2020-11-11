@@ -16,7 +16,8 @@ graph = {
 
 
 
-def _bfs(initial, graph,search):
+
+def _bfs(initial, graph, search):
 	visited = []
 	queue = [initial]
 
@@ -25,14 +26,12 @@ def _bfs(initial, graph,search):
 		node = queue.pop(0)
 		if node not in visited:
 			visited.append(node)
+			print(node)
 			neighbours = graph[node]
 			for n in neighbours:
 				queue.append(n)
 			if visited[-1] == search:
 				return visited
-	
-
-
 
 data = _bfs('6',graph,'9')
 
