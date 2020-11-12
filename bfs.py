@@ -1,4 +1,4 @@
-
+import pdb
 
 graph = {
 	
@@ -14,26 +14,29 @@ graph = {
 	'10' : ['3'],
 }
 
-
-
-
 def _bfs(initial, graph, search):
 	visited = []
 	queue = [initial]
-
-	while queue : 
+	
+	while queue : 	
+		print("Visited :")
+		print(visited)
 		
+		print("queue:")
+		print(queue)
+		
+		print("\n")
 		node = queue.pop(0)
 		if node not in visited:
 			visited.append(node)
-			print(node)
 			neighbours = graph[node]
+			# pdb.set_trace()
 			for n in neighbours:
 				queue.append(n)
 			if visited[-1] == search:
 				return visited
 
-data = _bfs('6',graph,'9')
+data = _bfs('1',graph,'9')
 
 print(data)		
 
