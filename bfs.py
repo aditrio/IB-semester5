@@ -38,7 +38,8 @@ def _bfs(initial, graph, search):
 
 data = _bfs('1',graph,'9')
 
-print(data)		
+print(data)	
+print("Hello")	
 
 
 
